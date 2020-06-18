@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale" charset="UTF-8">    
+        <link rel="stylesheet" href="style.css">
+        <title>Rijksmuseum exterior</title>  
+
+    </head>
+
+
+    <body>
+        <div class="title">
+            <h1>Rijksmuseum exterior</h1>
+        </div>
+        <div class="content_wrapper">
+            <div class="image_section">
+                <map name ="workmap">
+                    <area shape="rect" coords="618, 430, 768, 845" href="https://www.rijksmuseum.nl/en" alt="tower">
+                </map>
+                <img class = "map_image" src="a1ad67f5ebf14a83a182395a6448b331.jpg" alt="Rijksmuseum" width="1800" height="1020" usemap="#workmap">
+            </div>
+            <div class="info_section">
+                <div class="section_content active">
+                    <h2>HOME SECTION</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum fugit ipsa sed sequi reiciendis. Et, omnis. Aliquid error repudiandae, ullam, unde minima laudantium asperiores quos eaque facilis nemo quo.
+                    </p>
+                </div>
+            </div>
+            <div class="info_section">
+                <div class="section_content tower1">
+                    <h2>TOWERS</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum fugit ipsa sed sequi reiciendis. Et, omnis. Aliquid error repudiandae, ullam, unde minima laudantium asperiores quos eaque facilis nemo quo.
+                    </p>
+                </div>
+            </div>
+            <div class="info_section">
+                <div class="section_content main_entrance">
+                    <h2>MAIN ENTRANCE</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum fugit ipsa sed sequi reiciendis. Et, omnis. Aliquid error repudiandae, ullam, unde minima laudantium asperiores quos eaque facilis nemo quo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script
+         src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script src="jquery.rwdImageMaps.min.js"></script>
+        <script>
+        $(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+});
+
+</script> 
+    </body>
+        
+</html>
