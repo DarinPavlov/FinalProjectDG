@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/the-big-picture.css" rel="stylesheet">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale" charset="UTF-8">
+    <link rel="stylesheet" href="interactive image.css">
+    <title>Rijksmuseum exterior</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script type="text/javascript" src="./jquery.maphilight.js"></script>
+
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Interactive Image</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Return Home</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<div class="py-5">
+    <h6>         </h6>
+</div>
+
+<body>
+    <div class="content_wrapper">
+        <div class="image_section">
+            <div class="title">
+                <h1>Rijksmuseum exterior</h1>
+            </div>
+            <map name="workmap">
+                <area class="tower" shape="rect" coords="349, 130, 430, 500"
+                    onclick="myFunction('section_content_tower1')" class="group">
+                <area shape="rect" coords="430, 359, 570, 500" onclick="myFunction('section_content_main_entrance')"
+                    alt="main_entrance" class="group">
+            </map>
+            <img class="map_image" src="9144986-3x2-xlarge.jpg" alt="Rijksmuseum" usemap="#workmap" width="800"
+                height="1020">
+        </div>
+
+
+        <div class="text_section">
+            <div class="info_section--active">
+                <div id="section_content">
+                    <h2>HOME SECTION</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum fugit ipsa sed sequi
+                        reiciendis. Et, omnis. Aliquid error repudiandae, ullam, unde minima laudantium asperiores quos
+                        eaque facilis nemo quo.
+                    </p>
+                </div>
+            </div>
+            <div class="info_section">
+                <div id="section_content_tower1">
+                    <h2>TOWERS</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum fugit ipsa sed sequi
+                        reiciendis. Et, omnis. Aliquid error repudiandae, ullam, unde minima laudantium asperiores quos
+                        eaque facilis nemo quo.
+                    </p>
+                </div>
+            </div>
+            <div class="info_section">
+                <div id="section_content_main_entrance">
+                    <h2>MAIN ENTRANCE</h2>
+                    <p>
+                        Cuypers’ greatest challenges were the mise en scène of the building and
+                        finding a solution for the entrance. Right at the beginning of the project he had
+                        noted that, seen from the city, the building would ‘sink’ into the deep-lying polder.
+                        The passageway flanked by staircase towers automatically formed a gateway motif.
+                        But to be effective this gate needed to be at the same level as Stadhouderskade.
+                        The construction of the sewage system resulted in a slight raising of the ground,
+                        but this was not enough. Using the addition of the Netherlands Museum for History
+                        and Art, which included a collection of crypts, and exploiting the growing demand
+                        for plant rooms, especially for a heating system, he eventually managed to add a
+                        souterrain to the building. This brought it to level with the embankment and the
+                        Spiegelgracht bridge, which at his request had been kept as flat as possible to create
+                        an optimal perspective on the middle section of the museum seen from the canal
+                        zone. En passant he managed to persuade the city council to move a vegetable
+                        market, planned in front the museum, as it did not strike him as appropriate for the
+                        approach to the Rijksmuseum. And he made proposals for pocket-parks or, as a
+                        compromise between ‘profitability and embellishment’, villas with gardens on the
+                        former ramparts opposite the museum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function (e) {
+
+            maphighlightOptions = {
+                fillColor: 'ffffff',
+                strokeWidth: 0.2,
+                strokeColor: 'ffffff',
+                alwaysOn: true
+            }
+            
+            $('.map_image').maphilight(maphighlightOptions);
+
+            $('area').mouseover(function (e) {
+                $(this).data("maphilight", {"fillOpacity":"0.0", "strokeWidth": "1"});
+            
+                $('img.map_image').maphilight(maphighlightOptions)
+            }).mouseout(function (e) {
+                $(this).data("maphilight", {"fillOpacity":"0.2"});
+    
+                $('img.map_image').maphilight(maphighlightOptions)
+            })
+
+        });
+
+    </script>
+    <script>
+        function myFunction(param_div_id) {
+            document.getElementById('section_content').innerHTML = document.getElementById(param_div_id).innerHTML;
+        }
+
+    </script>
+
+    <script src="interactive image.js"></script>
+
+
+</body>
+
+</html>
